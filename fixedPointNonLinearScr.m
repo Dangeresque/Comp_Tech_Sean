@@ -1,16 +1,16 @@
 Xguess = 1;
 Yguess = 1;
 
-g1x = @(x,y) (-x^2 - 2*y^2 + 26)/2;
+gx = @(y) ( (1/2)*y^2 - 2*y +9.5)^(1/3);
 
-g2y = @(x,y) (-2*x^3 + y^2 + 19)/4;
+gy = @(x) sqrt((-1/2)*x^2 - x + 13);
  
 for i = 1:5
     Xtemp = Xguess; %because debugging and stuff!
     Ytemp = Yguess;
     
-    Xguess = g1x(Xtemp, Ytemp);
-    Yguess = g2y(Xtemp, Ytemp);
+    Xguess = gx(Ytemp);
+    Yguess = gy(Xtemp);
 end
  
 X = Xguess
