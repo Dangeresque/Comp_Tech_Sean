@@ -1,5 +1,5 @@
 function x = gaussJordan(A, b)
-
+ 
 [rA cA] = size(A);
 [rb cb] = size(b);
 
