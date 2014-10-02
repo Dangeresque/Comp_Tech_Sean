@@ -1,6 +1,8 @@
-function x = gaussJordan(A, b)
+function inv = inverse(A)
 
 [rA cA] = size(A);
+
+b = eye(rA, cA);
 [rb cb] = size(b);
 
 M = [A b];
@@ -18,5 +20,5 @@ for j = 1:cA
     end
 end
 
-x = M(:, cA+cb);
+inv = M(:, cA+1:cA+cb);
 end
