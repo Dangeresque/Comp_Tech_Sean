@@ -6,6 +6,7 @@ function x = gaussJordan(A, b)
 M = [A b];
 
 for j = 1:cA
+    pivot(M, j);
     M(j, :) = M(j, :) / M(j, j);
     
     for i = 1:rA
