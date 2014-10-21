@@ -16,6 +16,10 @@ A = [(kCH/mH)-l -(kCH/mH) 0 0;
     0 0 -(kCH/mH) (kCH/mH)-l];
 
 d = det(A);
-eigenvalues = double(solve(d, l, 0))
-frequencies = abs(eigenvalues.^.5)
-wavelengths = ((2*pi*c).*frequencies.^-1)*10^9 %in nanometers
+eigVal = double(solve(d, l, 0))
+freq = abs(eigVal.^.5) %abs to get rid of imaginary component for easy reading
+%Split up because one wavelength is so different.
+waveL1 = 2*pi*c./freq(1)
+waveL2 = 2*pi*c./freq(2)
+waveL3 = 2*pi*c./freq(3)
+waveL4 = 2*pi*c./freq(4)
