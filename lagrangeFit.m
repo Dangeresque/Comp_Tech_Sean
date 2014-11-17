@@ -11,7 +11,7 @@ for i=1:n
             continue
         end
         
-        f(i) = f(i)*(val-x(j))/(x(i)-x(j))
+        f(i) = f(i)*(val-x(j))/(x(i)-x(j));
         
     end
 end
