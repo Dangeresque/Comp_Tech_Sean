@@ -1,6 +1,6 @@
 function ycalc = lagrangeFit(x, y, val)
 
-n = size(x,2);
+n = max(size(x));
 
 f = ones(1,n);
 
